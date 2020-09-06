@@ -46,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
                     t.show();
                 }
                 else {
-                    Double S = Double.parseDouble(Distance);
-                    Double T = Double.parseDouble(Time);
-                    if(T==0){
+                    Double X = Double.parseDouble(Distance);
+                    Double Y = Double.parseDouble(Time);
+                    if(Y==0){
                         Toast t = Toast.makeText(MainActivity.this, R.string.Timemustbegreaterthanzero,Toast.LENGTH_LONG);
                         t.show();
                     }
                     else {
-                        Double ANS = (S / 1000) * (3600 / T);
+                        Double ANS = (X / 1000) / (Y / 3600);
                         Result.setText(String.format("%.2f", ANS));
                         if(ANS>80){
                             AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
